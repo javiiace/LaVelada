@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/estilos/navbar";
+
+.fondo{
+  background-image: url("./assets/fondo/background.webp");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.mascaraCapa{
+background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
+  opacity: .6;
+  z-index: -1;
+}

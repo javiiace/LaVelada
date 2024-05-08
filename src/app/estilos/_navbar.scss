@@ -1,7 +1,10 @@
 .navbar{
-  color: white;
-  justify-content: center;
-  align-items: center;
   display: flex;
+  flex-direction: row;
+  max-height: 150px;
 
+  &_desktop{
+  @extend .navbar;
+    justify-content: center;
+  }
 }

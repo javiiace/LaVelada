@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "app/estilos/navbar";
+@import "app/estilos/hr";
 
 .fondo{
   background-image: url("./assets/fondo/background.webp");
@@ -22,4 +23,8 @@ background-color: black;
   margin-left: 0;
   opacity: .6;
   z-index: -1;
+}
+
+a{
+  color: white;
 }

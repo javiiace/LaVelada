@@ -1,0 +1,30 @@
+app-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  header{
+    font-family: boxeador;
+  }
+  .contador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $degradadoContenedor;
+    width: 50%;
+    padding-top: 5%;
+    .number {
+      font-size: 15em;
+      font-family: boxeador;
+      color: $acento;
+    }
+    footer{
+
+      p{
+        font-size: 2em;
+      }
+    }
+  }
+}

@@ -1,26 +1,66 @@
-<nav class="navbar-desktop">
-  <div class="navbarLink">
-    <div class="navbarLinkItem">
-      <span><a routerLink="">El evento</a></span>
+@if (screenWidth > 600) {
+  <nav class="navbar_desktop">
+    <div class="navbarLink">
+      <div class="navbarLinkItem">
+        <span><a routerLink="">El evento</a></span>
+      </div>
     </div>
-  </div>
-  <div class="navbarLink">
-    <div class="navbarLinkItem">
-      <span><a routerLink="">Combates</a></span>
+    <div class="navbarLink">
+      <div class="navbarLinkItem">
+        <span><a routerLink="">Combates</a></span>
+      </div>
     </div>
-  </div>
-  <img src="./assets/logoVelada.png" class="navbarBrand">
-  <div class="navbarLink">
-    <div class="navbarLinkItem">
-      <span><a routerLink="">Pronósticos</a></span>
+    <img src="./assets/logoVelada.png" class="navbarBrand">
+    <div class="navbarLink">
+      <div class="navbarLinkItem">
+        <span><a routerLink="">Pronósticos</a></span>
+      </div>
     </div>
-  </div>
-  <div class="navbarLink">
-    <div class="navbarLinkItem">
-      <span><a routerLink="">Entradas</a></span>
+    <div class="navbarLink">
+      <div class="navbarLinkItem">
+        <span><a routerLink="">Entradas</a></span>
+      </div>
     </div>
+
+  </nav>
+  <div class="separador">
+    <hr>
   </div>
-</nav>
-<div class="separador">
-  <hr>
-</div>
+} @else {
+  @if (!mostrarMenu) {
+    <nav class="navbar_movil">
+      <div class="capaLogo">
+        <img src="./assets/logoVelada.png" class="logo">
+      </div>
+      <div class="capaBtn">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="toggleMenu()">
+          <mat-icon class="btn-menu">menu</mat-icon>
+        </button>
+      </div>
+
+    </nav>
+  }
+  @if (mostrarMenu) {
+    <div class="menuMovil">
+      <header>
+        <h1>MENÚ</h1>
+        <button mat-icon-button (click)="toggleMenu()">
+          <mat-icon class="btn-menu">close</mat-icon>
+        </button>
+      </header>
+      <hr>
+      <img src="./assets/logomenu.webp"/>
+      <hr>
+      <!--TODO AÑADIR ROUTER LINK ACTIVE -->
+      <a routerLink="home">EL EVENTO</a>
+      <hr>
+      <a routerLink="combates">COMBATES</a>
+      <hr>
+      <a routerLink="pronosticos">PRONOSTICOS</a>
+      <hr>
+      <a routerLink="entradas">ENTRADAS</a>
+      <hr>
+    </div>
+  }
+
+}

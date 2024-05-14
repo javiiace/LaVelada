@@ -1,30 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import "app/estilos/fuentes";
+@import "app/estilos/colores";
+@import "app/estilos/menu";
 @import "app/estilos/navbar";
-@import "app/estilos/hr";
+@import "app/estilos/logotipo";
+@import "app/estilos/home";
+@import "app/estilos/botones";
+@import "app/estilos/countdown";
+@import "app/estilos/screenSizes";
 
-.fondo{
-  background-image: url("./assets/fondo/background.webp");
-  width: 100%;
+
+html, body {
   height: 100%;
-  position: absolute;
-  margin-top: 0;
-  margin-left: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
+}
+@font-face {
+  font-family: 'boxeador';
+  src: url("./assets/fuentes/Bakpia Sabang.otf");
+}
+body {
+
+  //estilos para la barra de scroll
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: $primario;
+    border: 1px solid #cacaca;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: $fondo;
+  }
+
+
+  margin: 0;
+  background-color: $fondo;
+  .fondo {
+    position: fixed;
+    margin: 0;
+    background-image: url("./assets/background.webp");
+    background-size: cover;
+    opacity: .85;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  .mascaraCapa{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #414135;
+    opacity: .5;
+    z-index:-1;
+  }
+
+  color: $blanco;
+
+  a {
+    text-decoration: none;
+    color: $blanco;
+    font-family: boxeador;
+  }
 }
 
-.mascaraCapa{
-background-color: black;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin-top: 0;
-  margin-left: 0;
-  opacity: .6;
-  z-index: -1;
+.capaNav{
+  margin-bottom: 10%;
 }
 
-a{
-  color: white;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -22,6 +22,7 @@
     "@angular/platform-server": "^17.3.8",
     "@angular/router": "^17.3.0",
     "bootstrap": "^5.3.3",
+    "moment": "^2.30.1",
     "ngx-lite-video": "^1.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

@@ -1,0 +1,76 @@
+.hero{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  header{
+    transform: rotate(-15deg);
+    a{
+      color: $blanco;
+      text-decoration: none;
+      &:hover{
+        -webkit-text-stroke: 1px purple;
+      }
+    }
+
+  }
+  main{
+    margin-top: 5%;
+    width: 100vw;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.imagen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .fondoLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    img{
+      width: 40%;
+    }
+  }
+  .imagenLogo{
+    z-index: 20;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+.botonera{
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+
+  align-items: center;
+  justify-content: center;
+  .botonera1{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1%;
+  }
+  .boton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+  }
+  .btn{
+    transform: skewX(-15deg);
+    border-radius: 0;
+  }
+
+}

@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
-import {HomeVideoComponent} from "./pages/home-video/home-video.component";
-import {ErrorComponent} from "./pages/error/error.component";
+import {HomeComponent} from "./pages/home/home.component";
+import {CombatesComponent} from "./pages/combates/combates.component";
+import {InfoboxeadoresComponent} from "./pages/infoboxeadores/infoboxeadores.component";
+import {PronosticosComponent} from "./pages/pronosticos/pronosticos.component";
 
 export const routes: Routes = [
-  {path: "home", component: HomeVideoComponent},
-  {path: "combates", component: ErrorComponent},
-  {path: "pronosticos", component: ErrorComponent},
-  {path: "entradas", component: ErrorComponent},
-  {path: "**",component: HomeVideoComponent}
+  {path: "combates", component: CombatesComponent},
+  {path: "combate/:id", component: InfoboxeadoresComponent},
+  {path: "pronosticos", component: PronosticosComponent},
+  {path: "**", component: HomeComponent}
 ];

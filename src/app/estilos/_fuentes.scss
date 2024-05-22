@@ -1,17 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-$fuenteMenu: "Open Sans", sans-serif;
-
-
-h1{
-  font-family: boxeador!important;
+*{
+  color: white;
 }
+.agotadas{
+  color: $acento;
+}
+@font-face{
+  font-family: "Bakpia";
+  src: url("/assets/fuentes/Bakpia Sabang.otf");
+}
+
+@font-face{
+  font-family: "Nofex";
+  src: url("/assets/fuentes/Nofex.otf");
+}
+
+@mixin fuenteTextos($tamaño){
+  font-family: Nofex;
+  font-size: $tamaño;
+}
+
+@mixin fuenteTitulos($tamaño){
+  font-family: Bakpia;
+  font-size: $tamaño;
+}
+
+a{
+  @include fuenteTextos(20px);
+}
+
 h1{
-  font-size: 2rem!important;
+  @include fuenteTitulos(2em);
 }
 h2{
-  font-size: 1.8rem!important;
+  @include fuenteTitulos(1.6em);
 }
 h3{
-  font-size: 1.2em!important;
+  @include fuenteTitulos(1.4em);
 }

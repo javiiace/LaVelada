@@ -1,0 +1,17 @@
+.fondo{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -2;
+  background-image: url("/assets/background.webp");
+  background-size: cover;
+}
+.mascaraCapa{
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: $colorMascara;
+  position: fixed;
+  opacity: .3;
+  background-size: cover;
+}

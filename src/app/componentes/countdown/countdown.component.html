@@ -1,9 +1,14 @@
-<header>
-  <p>PARA EL INICIO DE LA VELADA DEL AÑO FALTAN</p></header>
-<div class="contador">
+<section class="countdown">
+  <main>
+    <h2>Para el inicio de la velada de año faltan...</h2>
+    <div class="container" id="dias">
+      <app-countdowndias [numero]="timeRemaining.days()" texto="dias"></app-countdowndias>
+    </div>
+    <div class="container" id="hora">
+      <app-countdowndias [numero]="timeRemaining.hours()" texto="horas"></app-countdowndias>:
+      <app-countdowndias [numero]="timeRemaining.minutes()" texto="minutos"></app-countdowndias>:
+      <app-countdowndias [numero]="timeRemaining.seconds()" texto="segundos"></app-countdowndias>
+    </div>
 
-  <p><span class="number">{{ cuantosDiasFaltan }}</span></p>
-  <footer><p>DÍAS</p></footer>
-
-
-</div>
+  </main>
+</section>

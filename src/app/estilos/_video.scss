@@ -1,0 +1,13 @@
+.video{
+  margin-top: 5%;
+
+  ngx-lite-youtube{
+    div{
+      border: solid 1px $acento;
+      border-radius: 2%;
+      iframe{
+        border-radius: 2%;
+      }
+    }
+  }
+}

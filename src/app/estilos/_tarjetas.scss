@@ -1,0 +1,23 @@
+.cardCombate{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .luchador{
+    img{
+      max-width: 200px;
+      max-height: 200px;
+    }
+    color: $acento;
+    h2{
+      transform: rotate(-15deg);
+    }
+  }
+  background: $degradadoFondo;
+  border-radius: 5%;
+  margin-bottom: 2%;
+  h3{
+    color: $acento;
+    transform: rotate(-45deg);
+  }
+}

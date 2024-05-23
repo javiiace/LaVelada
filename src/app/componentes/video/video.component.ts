@@ -10,6 +10,5 @@ import {NgxLiteYoutubeModule} from "ngx-lite-video";
   styleUrl: './video.component.scss'
 })
 export class VideoComponent {
-  @Input() idVideo:string="";
 
 }

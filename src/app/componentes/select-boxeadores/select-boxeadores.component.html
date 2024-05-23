@@ -1,0 +1,10 @@
+<section class="seleccionBoxeadores">
+  <div class="row container">
+    @for(boxeador of boxeadores; track boxeadores) {
+      <div class="imagenes">
+        <app-lazy-load-boxeadores nombre={{boxeador.apodo}} imagen={{boxeador.id}}></app-lazy-load-boxeadores>
+      </div>
+    }
+  </div>
+
+</section>

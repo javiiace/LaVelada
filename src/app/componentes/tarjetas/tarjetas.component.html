@@ -1,0 +1,48 @@
+<div class="cardCombate">
+  @if (luchador3 == null && luchador4 == null) {
+    <div class="luchador">
+      <a routerLink="/combate/{{infoLuchador1?.id}}">
+        <img style="view-transition-name:{{infoLuchador1?.id}}" src="./assets/boxeadores/{{infoLuchador1?.img}}.webp" alt="Imagen de {{infoLuchador1?.apodo}}">
+      </a>
+      <h2>{{ infoLuchador1?.apodo }}</h2>
+    </div>
+    <h3>VS</h3>
+    <div class="luchador">
+      <a routerLink="/combate/{{infoLuchador2?.id}}">
+        <img style="view-transition-name:{{infoLuchador2?.id}}" src="./assets/boxeadores/{{infoLuchador2?.img}}.webp" alt="Imagen de {{infoLuchador2?.apodo}}">
+      </a>
+      <h2>{{ infoLuchador2?.apodo }}</h2>
+    </div>
+
+  } @else {
+    <div class="luchador">
+      <a routerLink="/combate/{{infoLuchador1?.id}}">
+        <img style="view-transition-name:{{infoLuchador1?.id}}" src="./assets/boxeadores/{{infoLuchador1?.img}}.webp" alt="Imagen de {{infoLuchador1?.apodo}}">
+      </a>
+      <h2>{{ infoLuchador1?.apodo }}</h2>
+    </div>
+    <h3>&</h3>
+    <div class="luchador">
+      <a routerLink="/combate/{{infoLuchador2?.id}}">
+        <img style="view-transition-name:{{infoLuchador2?.id}}" src="./assets/boxeadores/{{infoLuchador2?.img}}.webp" alt="Imagen de {{infoLuchador2?.apodo}}">
+      </a>
+      <h2>{{ infoLuchador2?.apodo }}</h2>
+    </div>
+    <h3>VS</h3>
+
+    <div class="luchador">
+      <a routerLink="/combate/{{infoLuchador3?.id}}">
+        <img style="view-transition-name:{{infoLuchador3?.id}}" src="./assets/boxeadores/{{infoLuchador3?.img}}.webp" alt="Imagen de {{infoLuchador3?.apodo}}">
+      </a>
+      <h2>{{ infoLuchador3?.apodo }}</h2>
+    </div>
+    <h3>&</h3>
+    <div class="luchador">
+      <a routerLink="/combate/{{infoLuchador4?.id}}">
+        <img style="view-transition-name:{{infoLuchador4?.id}}" src="./assets/boxeadores/{{infoLuchador4?.img}}.webp" alt="Imagen de {{infoLuchador4?.apodo}}">
+      </a>
+      <h2>{{ infoLuchador4?.apodo }}</h2>
+    </div>
+  }
+
+</div>

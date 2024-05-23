@@ -14,7 +14,7 @@
   src: url("/assets/fuentes/Nofex.otf");
 }
 
-@mixin fuenteTextos($tamaño){
+@mixin fuenteMenu($tamaño){
   font-family: Nofex;
   font-size: $tamaño;
 }
@@ -22,18 +22,4 @@
 @mixin fuenteTitulos($tamaño){
   font-family: Bakpia;
   font-size: $tamaño;
-}
-
-a{
-  @include fuenteTextos(20px);
-}
-
-h1{
-  @include fuenteTitulos(2em);
-}
-h2{
-  @include fuenteTitulos(1.6em);
-}
-h3{
-  @include fuenteTitulos(1.4em);
 }

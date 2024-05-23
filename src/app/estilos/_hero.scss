@@ -1,76 +1,91 @@
-.hero{
-  width: 100vw;
+@import "screenSizes";
+
+#hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  header{
-    transform: rotate(-15deg);
+  align-items: center;
+  width: 100%;
+
+  #enlaceTwitch {
+    rotate: -15deg;
+    margin-top: 2%;
+    margin-bottom: 1%;
     a{
-      color: $blanco;
-      text-decoration: none;
-      &:hover{
-        -webkit-text-stroke: 1px purple;
+      font-family: Bakpia;
+      &:hover {
+        text-shadow: 3px 3px purple;
       }
     }
+  }
 
-  }
-  main{
-    margin-top: 5%;
-    width: 100vw;
-  }
-  footer{
+  #imgFondo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-  }
-}
-.imagen{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  .fondoLogo{
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 70%;
-    img{
-      width: 40%;
+    position: relative;
+
+    img {
+      max-width: 50%;
+    }
+
+    #logoHero {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+      justify-content: center;
+
+
     }
   }
-  .imagenLogo{
-    z-index: 20;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-
-  }
-}
-.botonera{
-  display: flex;
-  flex-direction: column;
-  width: 70vw;
-
-  align-items: center;
-  justify-content: center;
-  .botonera1{
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1%;
-  }
-  .boton{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-
-  }
-  .btn{
-    transform: skewX(-15deg);
-    border-radius: 0;
+  h1{
+    @include fuenteTitulos(2em);
   }
 
+  h2{
+    @include fuenteTitulos(1.6em);
+  }
+
+  h3{
+    @include fuenteTitulos(1.4em);
+  }
+  #informacion {
+    width: 50%;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      row-gap: 20px;
+
+      div {
+        display: flex;
+        @media screen and (max-width: $movil) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          row-gap: 20px;
+        }
+        @media screen and (min-width: $movil+1) {
+          flex-direction: row;
+          margin-bottom: 1%;
+        }
+        justify-content: space-around;
+      }
+
+
+    }
+  }
 }

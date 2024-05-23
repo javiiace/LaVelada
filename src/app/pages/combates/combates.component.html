@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    @for (pelea of peleas;track pelea.id) {
+    <div class="col-md-12 col-lg-6">
+      @if (pelea.luchador3 == null && pelea.luchador4 == null) {
+    <app-tarjetas luchador1={{pelea.luchador1}} luchador2={{pelea.luchador2}}></app-tarjetas>
+    } @else {
+    <app-tarjetas luchador1={{pelea.luchador1}} luchador2={{pelea.luchador2}} luchador3={{pelea.luchador3}}
+                      luchador4={{pelea.luchador4}}></app-tarjetas>
+    }
+    </div>
+    }
+  </div>
+</div>

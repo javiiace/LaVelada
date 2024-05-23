@@ -1,35 +1,33 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import moment from 'moment';
-import {CountdowndiasComponent} from "../countdowndias/countdowndias.component";
+import {Component, OnInit} from '@angular/core';
+
 @Component({
   selector: 'app-countdown',
   standalone: true,
-  imports: [
-    CountdowndiasComponent
-  ],
+  imports: [],
   templateUrl: './countdown.component.html',
   styleUrl: './countdown.component.scss'
 })
-export class CountdownComponent implements OnInit, OnDestroy{
-  countdownInverval?: any;
-  timeRemaining?: any;
+export class CountdownComponent implements OnInit{
 
+
+  cuantosDiasFaltan:number=0;
   constructor() {
   }
 
   ngOnInit() {
-    const endDate = moment('2024-07-13T18:00:00')
-    this.calculateTimeRemaining(endDate);
-    this.countdownInverval = setInterval(() => {
-      this.calculateTimeRemaining(endDate);
-    }, 1000);
+    this.cuantosDiasFaltan=this.diasFaltan();
   }
-  ngOnDestroy() {
-    clearInterval(this.countdownInverval);
+
+  diasFaltan():number{
+    let dias:number = 0;
+    let fechaEvento=new Date('2024-07-13');
+    let fechaHoy:Date = new Date();
+
+    dias=Math.floor((fechaEvento.getTime()-fechaHoy.getTime())/(1000*60*60*24));
+    return dias;
   }
-  calculateTimeRemaining(endDate: any): void {
-    const now = moment();
-    const diff = endDate.diff(now);
-    this.timeRemaining = moment.duration(diff);
-  }
+
+
+
+
 }
